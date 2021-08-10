@@ -1,5 +1,5 @@
 import React from "react"
-import { menuData } from "./data/MenuData"
+import { menuData } from "../data/MenuData"
 import { FaBars } from "react-icons/fa"
 import { Link } from "gatsby"
 import styled from "styled-components"

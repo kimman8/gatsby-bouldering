@@ -1,26 +1,26 @@
 [
   {
     "img": "../assets/images/climb-1.jpg",
-    "alt": "climbing",
-    "name": "bouldering",
+    "alt": "Lead Climbing",
+    "name": "Lead Climbing",
     "button": "view climb"
   },
   {
     "img": "../assets/images/climb-2.jpg",
-    "alt": "climbing",
-    "name": "bouldering",
+    "alt": "sport climbing",
+    "name": "Sport Climbing",
     "button": "view climb"
   },
   {
     "img": "../assets/images/climb-3.jpg",
-    "alt": "climbing",
-    "name": "bouldering",
+    "alt": "outdoor bouldering",
+    "name": "outdoor bouldering",
     "button": "view climb"
   },
   {
     "img": "../assets/images/climb-4.jpg",
-    "alt": "climbing",
-    "name": "bouldering",
+    "alt": "high ball",
+    "name": "high ball",
     "button": "view climb"
   }
 ]
