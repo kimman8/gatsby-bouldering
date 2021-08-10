@@ -1,0 +1,26 @@
+[
+  {
+    "img": "../assets/images/climb-1.jpg",
+    "alt": "climbing",
+    "name": "bouldering",
+    "button": "view climb"
+  },
+  {
+    "img": "../assets/images/climb-2.jpg",
+    "alt": "climbing",
+    "name": "bouldering",
+    "button": "view climb"
+  },
+  {
+    "img": "../assets/images/climb-3.jpg",
+    "alt": "climbing",
+    "name": "bouldering",
+    "button": "view climb"
+  },
+  {
+    "img": "../assets/images/climb-4.jpg",
+    "alt": "climbing",
+    "name": "bouldering",
+    "button": "view climb"
+  }
+]

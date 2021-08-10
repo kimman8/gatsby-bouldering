@@ -18,7 +18,7 @@ const Header = () => {
         ))}
       </NavMenu>
       <NavBtn>
-        <Button primary="true" round="true" big="true">
+        <Button primary="true" round="true" big="true" to="/indoor">
           Book a Climb
         </Button>
       </NavBtn>
@@ -26,12 +26,10 @@ const Header = () => {
   )
 }
 
-//YT 44:00
-
 export default Header
 
 const Nav = styled.nav`
-  background: tomato;
+  background: transparent;
   height: 80px;
   display: flex;
   justify-content: space-between;
