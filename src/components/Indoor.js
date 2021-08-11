@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 import { Button } from "./Button"
 
-const Indoor = () => {
+const Indoor = ({ heading }) => {
   const data = useStaticQuery(graphql`
     query IndoorQuery {
       allIndoorJson {
@@ -42,7 +42,16 @@ const Indoor = () => {
               <ImLocation />
               <ProductTitle>{item.node.name}</ProductTitle>
             </TextWrap>
-            <Button to="/indoor" big round>
+            <Button
+              to="/indoor"
+              round
+              primary
+              css={`
+                position: absolute;
+                font-size: 1rem;
+                top: 420px;
+              `}
+            >
               {item.node.button}
             </Button>
           </ProductInfo>
@@ -53,7 +62,7 @@ const Indoor = () => {
   }
   return (
     <ProductsContainer>
-      <ProductsHeading>Heading</ProductsHeading>
+      <ProductsHeading>{heading}</ProductsHeading>
       <ProductWrapper>{getIndoor(data)}</ProductWrapper>
     </ProductsContainer>
   )
@@ -64,7 +73,6 @@ export default Indoor
 const ProductsContainer = styled.div`
   min-height: 100vh;
   padding: 5rem calc((100vw - 1300px) / 2);
-  background: tomato;
   color: #fff;
 `
 const ProductsHeading = styled.div`
@@ -121,7 +129,12 @@ const ProductInfo = styled.div`
 const TextWrap = styled.div`
   display: flex;
   align-items: center;
+  flex-direction: row;
   position: absolute;
   top: 375px;
 `
-const ProductTitle = styled.div``
+const ProductTitle = styled.div`
+  font-weight: 400;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+`

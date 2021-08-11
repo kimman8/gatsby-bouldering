@@ -4,13 +4,14 @@ import Indoor from "../components/Indoor"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Testimonials from "../components/Testimonials"
 
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
     <Hero />
-    <Indoor />
+    <Indoor heading={"Dope places to boulder"} />
+    <Testimonials />
   </Layout>
 )
-//YT 1:19
 export default IndexPage

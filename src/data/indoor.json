@@ -14,13 +14,13 @@
   {
     "img": "../assets/images/climb-3.jpg",
     "alt": "outdoor bouldering",
-    "name": "outdoor bouldering",
+    "name": "Outdoor Bouldering",
     "button": "view climb"
   },
   {
     "img": "../assets/images/climb-4.jpg",
     "alt": "high ball",
-    "name": "high ball",
+    "name": "High Ball",
     "button": "view climb"
   }
 ]
