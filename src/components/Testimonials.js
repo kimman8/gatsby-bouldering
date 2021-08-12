@@ -1,10 +1,31 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { IoMdCheckmarkCircleOutline } from "react-icons/io"
 import { FaRegLightbulb } from "react-icons/fa"
 
 const Testimonials = () => {
+  const data = useStaticQuery(graphql`
+    query MyQuery {
+      allFile(
+        filter: {
+          ext: { regex: "/(jpg)|(png)|(jpeg)/" }
+          name: { in: ["guy", "girl"] }
+        }
+      ) {
+        edges {
+          node {
+            childImageSharp {
+              fluid(maxWidth: 3080, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
   return (
     <TestimonialsContainer>
       <TopLine>Testimonials</TopLine>
@@ -12,7 +33,13 @@ const Testimonials = () => {
       <ContentWrapper>
         <ColumnOne>
           <Testimonial>
-            <IoMdCheckmarkCircleOutline />
+            <IoMdCheckmarkCircleOutline
+              css={`
+                color: #3fffa8;
+                font-size: 2rem;
+                margin-bottom: 1rem;
+              `}
+            />
             <h3>Calvin Nguyen</h3>
             <p>
               "Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -21,7 +48,13 @@ const Testimonials = () => {
             </p>
           </Testimonial>
           <Testimonial>
-            <FaRegLightbulb />
+            <FaRegLightbulb
+              css={`
+                color: #f9b19b;
+                font-size: 2rem;
+                margin-bottom: 1rem;
+              `}
+            />
             <h3>Alan Taing</h3>
             <p>
               "Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -31,7 +64,9 @@ const Testimonials = () => {
           </Testimonial>
         </ColumnOne>
         <ColumnTwo>
-          <Images />
+          {data.allFile.edges.map((image, key) => (
+            <Images key={key} fluid={image.node.childImageSharp.fluid} />
+          ))}
         </ColumnTwo>
       </ContentWrapper>
     </TestimonialsContainer>
@@ -72,7 +107,7 @@ const ContentWrapper = styled.div`
 `
 const ColumnOne = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 `
 const ColumnTwo = styled.div`
   display: grid;
