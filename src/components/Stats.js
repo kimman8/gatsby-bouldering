@@ -1,31 +1,6 @@
 import React from "react"
-import { GiEarthAmerica } from "react-icons/gi"
-import { MdAirplanemodeActive, MdTimer } from "react-icons/md"
-import { FaMoneyCheck } from "react-icons/fa"
 import styled from "styled-components"
-//2:26
-const StatsData = [
-  {
-    icon: <GiEarthAmerica css={``} />,
-    title: "Over 100 destinations",
-    desc: "Climb in over 100 unique places",
-  },
-  {
-    icon: <MdAirplanemodeActive />,
-    title: "Over different 1 Million Climbing holds",
-    desc: "Over 1 million climbs completed last year",
-  },
-  {
-    icon: <MdTimer />,
-    title: "Best Support",
-    desc: "Access our support team 24/7",
-  },
-  {
-    icon: <FaMoneyCheck />,
-    title: "Best Deals",
-    desc: "We offer the best prices",
-  },
-]
+import { StatsData } from "../data/StatsData"
 
 const Stats = () => {
   return (
@@ -64,8 +39,9 @@ const StatsBox = styled.div`
 const Icon = styled.div`
   font-size: 3rem;
   margin-bottom: 1rem;
+  color: #047bf1;
 `
-const Title = styled.div`
+const Title = styled.p`
   font-size: clamp(1rem, 2.5vw, 1.5rem);
   margin-bottom: 0.5rem;
 `
