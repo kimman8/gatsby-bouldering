@@ -1,5 +1,4 @@
 import React from "react"
-
 import { GiEarthAmerica } from "react-icons/gi"
 import { MdAirplanemodeActive, MdTimer } from "react-icons/md"
 import { FaMoneyCheck } from "react-icons/fa"

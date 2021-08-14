@@ -1,14 +1,30 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 import { StatsData } from "../data/StatsData"
+import Aos from "aos"
+import "aos/dist/aos.css"
 
 const Stats = () => {
+  useEffect(() => {
+    Aos.init({})
+  }, [])
   return (
     <StatsContainer>
-      <Heading>Why Choose Us?</Heading>
+      <Heading
+        data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
+      >
+        Why Choose Us?
+      </Heading>
       <Wrapper>
         {StatsData.map((item, index) => (
-          <StatsBox key={index}>
+          <StatsBox
+            key={index}
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          >
             <Icon>{item.icon}</Icon>
             <Title>{item.title}</Title>
             <Description>{item.desc}</Description>

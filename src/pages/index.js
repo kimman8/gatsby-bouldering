@@ -1,4 +1,5 @@
 import * as React from "react"
+import Email from "../components/Email"
 import Hero from "../components/Hero"
 import Indoor from "../components/Indoor"
 
@@ -14,6 +15,7 @@ const IndexPage = () => (
     <Indoor heading={"Dope places to boulder"} />
     <Testimonials />
     <Stats />
+    <Email />
   </Layout>
 )
 export default IndexPage

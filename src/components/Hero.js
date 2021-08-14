@@ -1,9 +1,14 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 import { Button } from "./Button"
 import Video from "../assets/videos/drone1.mp4"
+import Aos from "aos"
+import "aos/dist/aos.css"
 
 const Hero = () => {
+  useEffect(() => {
+    Aos.init({})
+  }, [])
   return (
     <HeroContainer>
       <HeroBg>
@@ -11,9 +16,29 @@ const Hero = () => {
       </HeroBg>
       <HeroContent>
         <HeroItems>
-          <HeroH1>Unreal Climbs!</HeroH1>
-          <HeroP>Out of this World!</HeroP>
-          <Button to="/indoor" big round primary>
+          <HeroH1
+            data-aos="fade-up"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+          >
+            Unreal Climbs!
+          </HeroH1>
+          <HeroP
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="1000"
+          >
+            Out of this World!
+          </HeroP>
+          <Button
+            to="/indoor"
+            big
+            round
+            primary
+            data-aos="fade-up"
+            data-aos-delay="350"
+            data-aos-duration="1000"
+          >
             Climb Now
           </Button>
         </HeroItems>

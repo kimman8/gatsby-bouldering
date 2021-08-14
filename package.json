@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "aos": "^2.3.4",
     "babel-plugin-styled-components": "^1.13.2",
     "gatsby": "^3.11.0",
     "gatsby-image": "^3.11.0",
