@@ -1,15 +1,22 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { menuData } from "../data/MenuData"
 import { FaBars } from "react-icons/fa"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import { Button } from "./Button"
 
-const Header = () => {
+const Header = ({ toggle }) => {
+  const [navbar, setNavbar] = useState(false)
+  useEffect(() => {
+    if (window.location.pathname) {
+      setNavbar(window.location.pathname)
+    }
+    console.log(window.location.pathname)
+  }, [])
   return (
-    <Nav>
+    <Nav navbar={navbar}>
       <NavLink to="/">BOULDERING</NavLink>
-      <Bars />
+      <Bars onClick={toggle} />
       <NavMenu>
         {menuData.map((item, index) => (
           <NavLink to={item.link} key={index}>
@@ -29,7 +36,7 @@ const Header = () => {
 export default Header
 
 const Nav = styled.nav`
-  background: transparent;
+  background: ${({ navbar }) => (navbar !== "/" ? "#141414" : "transparent")};
   height: 80px;
   display: flex;
   justify-content: space-between;
